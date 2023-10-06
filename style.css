@@ -1,6 +1,7 @@
 * {
     font-family: 'Nunito', sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -8,17 +9,54 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    width: 1440px;
-    height: 6884px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 nav {
     display: flex;
-    width: 1240px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    gap: 175px;
-    padding: 80px 100px 0px 100px
+    padding: 80px 100px 0px 100px;
+
+}
+
+.navbar {
+    font-family: Kufam !important;
+    font-size: 30px;
+    gap: 135px;
+}
+
+.navbar .container-fluid {
+    gap: 140px;
+}
+
+.navbar-nav {
+    gap: 30px;
+    font-family: Kufam !important;
+}
+
+.nav-item {
+    font-family: Kufam !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-family: Kufam !important;
+}
+
+
+.bg-aqua {
+    background-color: #F8F0E5 !important;
 }
 
 nav .logo {
@@ -28,7 +66,8 @@ nav .logo {
 nav .menu {
     display: flex;
     align-items: flex-start;
-    gap: 44px;
+    gap: 50px;
+    margin-bottom: 0;
 }
 
 nav .menu li {
@@ -42,7 +81,7 @@ nav .menu li a {
 }
 
 nav .menu li a:hover {
-    color: #FFC265;
+    color: #DAC0A3;
 }
 
 .yellow-button {
@@ -52,13 +91,18 @@ nav .menu li a:hover {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: #FFC265;
+    background: #DAC0A3;
     text-decoration: none;
     color: #3F3F3F;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 64%;
+}
+
+.yellow-button:hover {
+    color: #FFF;
+    background: #3F3F3F;
 }
 
 section#home {
@@ -75,13 +119,13 @@ section#home {
 }
 
 .kolom .deskripsi {
-    background: #C1FFFA;
+    background: #EADBC8;
     border-radius: 20px;
     display: flex;
     padding: 14px 40px;
     justify-content: center;
     gap: 10px;
-    color: #1DA599;
+    color: #3F3F3F;
     font-family: Nunito;
     font-size: 24px;
     font-style: normal;
@@ -96,7 +140,6 @@ section#home {
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
-    width: 627px;
     margin: 0;
     margin-top: 35px;
 }
@@ -127,14 +170,21 @@ section#home {
     margin-top: 32px;
 }
 
+.hero-img {
+    width: ;
+}
+
 section#about-us {
     display: flex;
     align-items: center;
-    gap: 54px;
+    gap: 130px;
     padding: 100px 108px 120px 108px;
-    background-color: #F3FFFE;
-    ;
+    background-color: #fbffdc4b;
+    width: 100%;
+    justify-content: center;
 }
+
+
 
 .tentang {
     display: flex;
@@ -146,11 +196,15 @@ section#about-us {
     margin-top: 40px;
 }
 
+img.tentang-img.img-fluid {
+    margin-right: 90px;
+}
+
 .titleb {
     width: 663px;
     color: #4A4A4A;
     font-family: Kufam;
-    font-size: 54px;
+    font-size: 49px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
@@ -166,7 +220,6 @@ section#about-us {
     font-weight: 600;
     line-height: 150%;
     margin: 0;
-    margin-top: 25px;
 }
 
 .tentang li {
@@ -185,7 +238,7 @@ section#about-us {
     display: inline-flex;
     padding: 6px;
     border-radius: 10px;
-    background: #C1FFFA;
+    background: #EADBC8;
     margin-right: 15px;
 
 }
@@ -204,13 +257,19 @@ section#about-us {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: #FFC265;
+    background: #DAC0A3;
     color: #3F3F3F;
     font-family: Nunito;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 64%;
+    text-decoration: none;
+}
+
+.orange-button:hover {
+    color: rgb(218, 192, 163);
+    background: rgb(63, 63, 63);
 }
 
 .yellowb-button {
@@ -220,9 +279,10 @@ section#about-us {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    border: 2px solid #FFC265;
-    color: #FFC265;
+    border: 2px solid #DAC0A3;
+    color: #DAC0A3;
     font-family: Nunito;
+    text-decoration: none;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -232,8 +292,11 @@ section#about-us {
 section#package {
     display: inline-flex;
     padding: 77px 100px 50px 100px;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .paket {
@@ -268,18 +331,18 @@ section#package {
 
 .card-package {
     display: flex;
-    width: 1240px;
+    width: 100%;
     align-items: flex-start;
     align-content: flex-start;
     gap: 46px 78px;
     flex-wrap: wrap;
     margin-top: 72px;
+    justify-content: center;
 }
 
 .card {
     padding: 28px 0px 28px 26px;
     align-items: flex-start;
-    gap: 20px;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 4px 20px 0px rgba(29, 165, 153, 0.15);
@@ -296,7 +359,7 @@ section#package {
     width: 311px;
     height: 238px;
     border-radius: 10px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(<o-image>), lightgray 50% / cover no-repeat;
 }
 
 .package-info {
@@ -307,7 +370,7 @@ section#package {
 }
 
 .package-type {
-    color: #FFC265;
+    color: #DAC0A3;
     font-family: Nunito;
     font-size: 16px;
     font-style: normal;
@@ -317,7 +380,7 @@ section#package {
 }
 
 .best-seller-badge {
-    color: #1DA599;
+    color: #958814;
     font-family: Nunito;
     font-size: 16px;
     font-style: normal;
@@ -329,7 +392,7 @@ section#package {
     align-items: center;
     gap: 10px;
     border-radius: 30px 0px 0px 30px;
-    background: #C1FFFA;
+    background: #EADBC8;
 }
 
 .package-facilities {
@@ -369,7 +432,7 @@ section#package {
 }
 
 .highlighted {
-    color: #1DA599;
+    color: #958814;
     font-family: Kufam;
     font-size: 20px;
     font-style: normal;
@@ -388,10 +451,10 @@ section#package {
     height: 24px;
     display: flex;
     padding: 6px;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: #C1FFFA;
+    background: #EADBC8;
 }
 
 .outlined-yellow-button {
@@ -401,8 +464,8 @@ section#package {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    border: 1px solid #FFC265;
-    color: #FFC265;
+    border: 1px solid #DAC0A3;
+    color: #DAC0A3;
     font-family: Nunito;
     font-size: 12px;
     font-style: normal;
@@ -413,20 +476,21 @@ section#package {
 
 .soon-card {
     width: 361px;
-    height: 549px;
+    height: 585px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FFF;
+    position: relative;
     box-shadow: 0px 4px 20px 0px rgba(29, 165, 153, 0.15);
 }
 
 .soon {
     width: 242px;
     height: 24px;
-    position: absolute;
-    right: 56px;
-    bottom: 341px;
-    color: #1DA599;
+    color: #958814;
     text-align: center;
     font-family: Kufam;
     font-size: 20px;
@@ -438,9 +502,10 @@ section#package {
 section#airplane {
     display: inline-flex;
     align-items: center;
-    gap: 80px;
     margin-top: 28px;
     margin-left: 100px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .airplane-header {
@@ -486,8 +551,8 @@ section#airplane {
     align-items: center;
     gap: 6px;
     border-radius: 20px;
-    background: #C1FFFA;
-    color: #1DA599;
+    background: #EADBC8;
+    color: #958814;
     font-family: Nunito;
     font-size: 20px;
     font-style: normal;
@@ -500,11 +565,14 @@ section#airplane {
     height: 24px;
 }
 
+svg {
+    vertical-align: unset !important;
+}
+
 .logo-plane {
     display: flex;
     align-items: flex-start;
     gap: 50px;
-    width: 226px;
     height: 77px;
 }
 
@@ -513,8 +581,9 @@ section#facilities {
     padding: 90px 100px;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
     gap: 10px;
-    background: #F3FFFE;
+    background: #fbffdc4b;
     margin-top: 97px;
 }
 
@@ -522,6 +591,7 @@ section#facilities {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 50px;
 }
 
@@ -558,11 +628,12 @@ section#facilities {
 
 .facilities-card {
     display: flex;
-    width: 1239px;
+    width: 100%;
     align-items: flex-start;
     align-content: flex-start;
     gap: 50px 37px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .facilities-box {
@@ -584,13 +655,10 @@ section#facilities {
 
 .facilities-logo {
     display: flex;
-    padding: 6px;
     align-items: flex-start;
-    gap: 10px;
     border-radius: 10px;
-    background: #C1FFFA;
-    width: 24px;
-    height: 24px;
+    background: #EADBC8;
+    padding: 6px;
 }
 
 .fac-text-box {
@@ -627,6 +695,7 @@ section#testimonial {
     align-items: flex-start;
     gap: 10px;
     background: #FFF;
+    width: 100%;
 }
 
 .testimoni {
@@ -634,12 +703,14 @@ section#testimonial {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    width: 100%;
 }
 
 .testi-header {
     display: flex;
     align-items: flex-end;
-    gap: 174px;
+    width: 100%;
+    justify-content: center;
 }
 
 .prev-button {
@@ -649,7 +720,7 @@ section#testimonial {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: #FFC265;
+    background: #DAC0A3;
     color: #3F3F3F;
     font-family: Nunito;
     font-size: 20px;
@@ -667,14 +738,14 @@ section#testimonial {
 .testi-head-box {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
 }
 
 .titlef {
     width: 860px;
     color: #4A4A4A;
-    text-align: right;
+    text-align: center;
     font-family: Kufam;
     font-size: 54px;
     font-style: normal;
@@ -704,7 +775,6 @@ section#testimonial {
 
 .all-testi {
     display: flex;
-    width: 1270px;
     flex-direction: column;
     align-items: center;
     gap: 52px;
@@ -750,7 +820,7 @@ section#testimonial {
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background: lightgray 50% / cover no-repeat;
 }
 
 .testi-tag {
@@ -760,8 +830,8 @@ section#testimonial {
     align-items: center;
     gap: 6px;
     border-radius: 20px;
-    background: #C1FFFA;
-    color: #1DA599;
+    background: #EADBC8;
+    color: #958814;
     font-family: Nunito;
     font-size: 10px;
     font-style: normal;
@@ -794,8 +864,8 @@ section#testimonial {
     align-items: center;
     gap: 10px;
     border-radius: 20px;
-    background: #C1FFFA;
-    color: #1DA599;
+    background: #EADBC8;
+    color: #958814;
     font-family: Nunito;
     font-size: 14px;
     font-style: normal;
@@ -831,7 +901,7 @@ section#testimonial {
     align-items: center;
     gap: 10px;
     border-radius: 10px;
-    background: #FFC265;
+    background: #DAC0A3;
     color: #3F3F3F;
     font-family: Nunito;
     font-size: 20px;
@@ -852,6 +922,7 @@ section#gallery {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    width: 100%;
 }
 
 .galeri {
@@ -859,6 +930,7 @@ section#gallery {
     flex-direction: column;
     align-items: center;
     gap: 70px;
+    width: 100%;
 }
 
 .galeri-header {
@@ -921,14 +993,26 @@ section#gallery {
     height: 353px;
     flex-shrink: 0;
     border-radius: 10px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%) lightgray 50% / cover no-repeat;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+    position: relative;
+
+}
+
+.glr-img::after {
+    position: absolute;
+    z-index: 900;
+    width: 329px;
+    height: 353px;
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%) lightgray 50% / cover no-repeat;
 }
 
 .galeri-img2 {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    position: relative;
 }
 
 .glr-img2 {
@@ -953,9 +1037,9 @@ section#gallery {
     height: 56px;
     flex-shrink: 0;
     border-radius: 10px;
-    border: 1px solid #1DA599;
-    background: linear-gradient(180deg, rgba(29, 165, 153, 0.70) 0%, rgba(29, 165, 153, 0.70) 100%);
-    filter: blur(1px);
+    border: 1px solid #958814;
+    background: linear-gradient(180deg, #0d6dfd8b 0%, #958814 100%);
+    justify-content: center;
     display: inline-flex;
     align-items: center;
     gap: 21px;
@@ -969,32 +1053,34 @@ section#gallery {
     /* 21px */
 }
 
-.show {
+.show-logo {
     width: 24px;
     height: 24px;
 }
 
 .footer {
     display: flex;
-    width: 1440px;
+    width: 100%;
     padding: 60px 90px 28px 90px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    background: #1DA599;
+    background: #958814;
 }
 
 .footer-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 25px;
+    width: 100%;
 }
 
 .menu-footer {
     display: flex;
     align-items: flex-start;
-    gap: 49px;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .footer-logo {
@@ -1030,28 +1116,33 @@ section#gallery {
 }
 
 .footer-alnasr-logo {
-    width: 33.88px;
-    height: 51px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
 }
 
 .footer-alnasr-text {
     width: 114px;
-    height: 25px;
+    height: 31px;
     flex-shrink: 0;
-    color: #1DA599;
+    color: #958814;
     font-family: Kufam;
-    font-size: 32px;
+    margin-bottom: 0;
+    font-size: 27px;
     font-style: normal;
     font-weight: 600;
-    line-height: 64%;
-    /* 20.48px */
+    line-height: 80%;
+    margin-left: 15px;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-subtitle {
     width: 72px;
-    height: 34px;
-    color: #1DA599;
+    height: 20px;
+    color: #958814;
     font-family: Kufam;
     font-size: 20px;
     font-style: normal;
@@ -1070,47 +1161,13 @@ section#gallery {
     line-height: normal;
 }
 
-.frame18 {
+.footer-list {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-}
-
-.quick-link {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
 }
 
-.quick-link-h1 {
-    width: 123px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.quicklink-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
-}
-
-.quicklink-ul li {
-    width: 123px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
 
 .umrah {
     display: flex;
@@ -1140,84 +1197,21 @@ section#gallery {
 
 .umrah-ul li {
     width: 205px;
+}
+
+.umrah-ul li a {
     color: #FFF;
     font-family: Nunito;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-decoration: none;
 }
 
-.hajj {
+.footer-box {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
-}
-
-.hajj-h1 {
-    width: 205px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.hajj-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
-}
-
-.hajj-ul li {
-    width: 205px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.officeplace {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.office-h1 {
-    width: 205px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.office-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
-}
-
-.office-ul li {
-    width: 205px;
-    color: #FFF;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
 }
 
 .line {
@@ -1246,6 +1240,878 @@ section#gallery {
     gap: 10px;
     border-radius: 10px;
     background: #FFF;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .title {
+        color: #4A4A4A;
+        font-family: Kufam;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        margin: 0;
+        margin-top: 35px;
+    }
+
+    .navbar {
+        font-family: Kufam !important;
+        font-size: 23px;
+        gap: 30px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+
+    }
+
+    .kolom .yellow-button {
+        font-size: 16px;
+    }
+
+    img.tentang-img.img-fluid {
+        margin-right: 30px;
+    }
+
+    .titleb {
+        font-size: 35px;
+        width: auto;
+        height: auto;
+    }
+
+    .subtitleb {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .tentang {
+        margin-top: 20px;
+    }
+
+    .tentang li {
+        font-size: 20px;
+    }
+
+    .tentang .about-icon {
+        width: 27px;
+        padding: 6px;
+        height: 29px;
+        align-items: center
+    }
+
+    .orange-button {
+        font-size: 16px;
+    }
+
+    .yellowb-button {
+        font-size: 16px;
+    }
+
+    .titlec {
+        font-size: 40px;
+    }
+
+    .subtitlec {
+        font-size: 20px;
+    }
+
+    .titled {
+        font-size: 29px;
+    }
+
+    .subtitled {
+        font-size: 20px;
+    }
+
+    .titlee {
+        font-size: 40px;
+    }
+
+    .subtitlee {
+        font-size: 20px;
+    }
+
+    .facilities-card {
+        width: auto;
+        justify-content: center;
+    }
+
+    .titlef {
+        font-size: 40px;
+    }
+
+    .subtitlef {
+        font-size: 20px;
+    }
+
+    .row1 {
+        display: flex;
+        align-items: flex-start;
+        width: 500px;
+        gap: 49px;
+        flex-direction: column;
+    }
+
+    .titleg {
+        font-size: 40px;
+    }
+
+    .subtitleg {
+        font-size: 20px;
+    }
+
+    .galeri-cont {
+        display: flex;
+        width: 943px;
+        gap: 25px;
+    }
+
+    .kabah {
+        width: 379px;
+        height: 570px;
+    }
+
+    .glr-img {
+        width: 256px;
+        height: 267px;
+    }
+
+    .glr-img2 {
+        width: 256px;
+        height: 267px;
+    }
+
+    .green-button {
+        width: 148px;
+        height: 34px;
+        gap: 6px;
+        font-size: 9px;
+    }
+
+    .show-logo {
+        width: 17px;
+        height: 17px;
+    }
+
+    .menu-footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: unset;
+        flex-direction: column;
+    }
+
+    .footer-list {
+        gap: 8px;
+    }
+
+    .footer-logo-text {
+        padding: 9px 5px;
+        gap: 10px;
+    }
+
+    .footer-alnasr-text {
+        width: 78px;
+        height: 31px;
+        font-size: 22px;
+    }
+
+    .logo-subtitle {
+        width: 55px;
+        height: 10px;
+        font-size: 15px;
+    }
+
+    .footer-logo {
+        gap: 20px;
+        margin-right: 18px;
+    }
+
+    .footer-logo-notes {
+        width: 288px;
+        font-size: 12px;
+    }
+
+    .umrah-h1 {
+        width: 110px;
+        font-size: 17px;
+    }
+
+    .umrah-ul li {
+        width: 178px;
+    }
+
+    .umrah-ul li a {
+        font-size: 14px;
+    }
+
+    .socmed {
+        display: inline-flex;
+        gap: 436px;
+        align-content: center;
+        width: 110%;
+    }
+
+    .footer-box {
+        gap: 0;
+    }
+
+    span.copyright {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .ig-logo {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+
+
+    .title {
+        color: #4A4A4A;
+        font-family: Kufam;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        margin: 0;
+        margin-top: 35px;
+    }
+
+    .navbar {
+        font-family: Kufam !important;
+        font-size: 23px;
+        gap: 30px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+
+    }
+
+    .kolom .yellow-button {
+        font-size: 16px;
+    }
+
+    img.tentang-img.img-fluid {
+        margin-right: 30px;
+    }
+
+    .titleb {
+        font-size: 35px;
+        width: auto;
+        height: auto;
+    }
+
+    .subtitleb {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .tentang {
+        margin-top: 20px;
+    }
+
+    .tentang li {
+        font-size: 20px;
+    }
+
+    .tentang .about-icon {
+        width: 27px;
+        padding: 6px;
+        height: 29px;
+        align-items: center
+    }
+
+    .orange-button {
+        font-size: 16px;
+    }
+
+    .yellowb-button {
+        font-size: 16px;
+    }
+
+    .titlec {
+        font-size: 40px;
+    }
+
+    .subtitlec {
+        font-size: 20px;
+    }
+
+    .titled {
+        font-size: 29px;
+    }
+
+    .subtitled {
+        font-size: 20px;
+    }
+
+    .titlee {
+        font-size: 40px;
+    }
+
+    .subtitlee {
+        font-size: 20px;
+    }
+
+    .facilities-card {
+        width: auto;
+        justify-content: center;
+    }
+
+    .titlef {
+        font-size: 40px;
+    }
+
+    .subtitlef {
+        font-size: 20px;
+    }
+
+    .row1 {
+        display: flex;
+        align-items: flex-start;
+        width: 500px;
+        gap: 49px;
+        flex-direction: column;
+    }
+
+    .titleg {
+        font-size: 40px;
+    }
+
+    .subtitleg {
+        font-size: 20px;
+    }
+
+    .galeri-cont {
+        display: flex;
+        width: 943px;
+        gap: 25px;
+    }
+
+    .kabah {
+        width: 379px;
+        height: 570px;
+    }
+
+    .glr-img {
+        width: 256px;
+        height: 267px;
+    }
+
+    .glr-img2 {
+        width: 256px;
+        height: 267px;
+    }
+
+    .green-button {
+        width: 148px;
+        height: 34px;
+        gap: 6px;
+        font-size: 9px;
+    }
+
+    .show-logo {
+        width: 17px;
+        height: 17px;
+    }
+
+    .menu-footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: unset;
+        flex-direction: column;
+    }
+
+    .footer-list {
+        gap: 8px;
+    }
+
+    .footer-logo-text {
+        padding: 9px 5px;
+        gap: 10px;
+    }
+
+    .footer-alnasr-text {
+        width: 78px;
+        height: 31px;
+        font-size: 22px;
+    }
+
+    .logo-subtitle {
+        width: 55px;
+        height: 10px;
+        font-size: 15px;
+    }
+
+    .footer-logo {
+        gap: 20px;
+        margin-right: 18px;
+    }
+
+    .footer-logo-notes {
+        width: 288px;
+        font-size: 12px;
+    }
+
+    .umrah-h1 {
+        width: 110px;
+        font-size: 17px;
+    }
+
+    .umrah-ul li {
+        width: 178px;
+    }
+
+    .umrah-ul li a {
+        font-size: 14px;
+    }
+
+    .socmed {
+        display: inline-flex;
+        gap: 436px;
+        align-content: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-box {
+        gap: 0;
+    }
+
+    span.copyright {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .ig-logo {
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .kolom {
+        align-items: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .hero-img {
+        height: 463px;
+    }
+
+    .kolom-img {
+        display: flex;
+        justify-content: center;
+        padding-right: 23px;
+    }
+
+    img.tentang-img.img-fluid {
+        height: 460px;
+    }
+
+    .about-img {
+        display: flex;
+        justify-content: center;
+        padding-left: 25px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .tentang-button {
+        justify-content: center;
+    }
+
+    .titlec {
+        font-size: 37px;
+        width: 665px;
+    }
+
+    section#facilities {
+        padding: 90px 75px;
+
+    }
+
+    .titlee {
+        width: 100%;
+
+    }
+
+    .subtitlee {
+        width: 100%;
+    }
+
+    section#package {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    section#airplane {
+        margin-left: 0;
+    }
+
+    .titlef {
+        font-size: 37px;
+        width: 600px;
+    }
+
+    .titleg {
+        font-size: 37px;
+    }
+
+    .galeri-cont {
+        display: flex;
+        width: 943px;
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeri-img {
+        display: flex;
+        width: 685px;
+        align-items: center;
+        align-content: flex-start;
+        gap: 37px 27px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-footer {
+        display: flex;
+        align-items: flex-start;
+        width: 112%;
+        justify-content: unset;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+
+    .footer-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .socmed {
+        gap: 163px;
+    }
+}
+
+
+/* sm */
+@media (max-width: 576px) {
+    .container {
+        max-width: 475px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    section#home {
+        padding: 78px 40px 78px 40px;
+    }
+
+    .kolom .deskripsi {
+        font-size: 12px;
+        font-weight: bolder;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .kolom .yellow-button {
+        font-size: 13px;
+    }
+
+    .kolom-img {
+        padding-right: 15px;
+    }
+
+    .hero-img {
+        height: auto;
+
+    }
+
+
+
+    img.tentang-img.img-fluid {
+        height: 333px;
+    }
+
+    .titleb {
+        font-size: 30px;
+
+    }
+
+    .subtitleb {
+        font-size: 17px;
+    }
+
+    .tentang {}
+
+    .tentang li {
+        font-size: 13px;
+    }
+
+    .yellowb-button {
+        line-height: 70%;
+        font-size: 14px;
+        padding: 30px 45px;
+    }
+
+    .orange-button {
+        font-size: 14px;
+        padding: 30px 45px;
+    }
+
+    .tentang-button {
+        align-items: center;
+    }
+
+    section#package {
+        padding: 77px 50px 50px 50px;
+    }
+
+    .titlec {
+        width: 100%;
+        font-size: 30px;
+
+    }
+
+    .subtitlec {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .package-image {
+        width: 234px;
+    }
+
+    .package-type {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .highlighted {
+        font-size: 15px;
+    }
+
+    .soon-card {
+        height: 495px;
+        width: 100%;
+    }
+
+    section#airplane {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 28px;
+        gap: 50px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    section#facilities {
+        padding: 90px 40px;
+    }
+
+    .facilities-box {
+        padding: 9px;
+    }
+
+    .titlee {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .subtitlee {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    section#testimonial {
+        padding: 90px 40px 40px 40px;
+    }
+
+    .testi-box {
+        padding: 22px 109px;
+    }
+
+    .titlef {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .subtitlef {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .titleg {
+        width: 425px;
+    }
+
+    .subtitleg {
+        width: 435px;
+    }
+
+    .kabah {
+        width: 275px;
+        height: 390px;
+
+    }
+
+    .glr-img {
+        width: 231px;
+        height: 231px;
+    }
+
+    .glr-img2 {
+        width: 231px;
+        height: 231px;
+    }
+
+    .menu-footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-box {
+        flex-direction: column;
+    }
+
+    .socmed {
+        gap: 54px;
+    }
+
+    section#gallery {
+        display: inline-flex;
+        padding: 70px 40px 100px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .titleg {
+        width: 400px;
+        font-size: 30px;
+    }
+
+    .subtitleg {
+        width: 350px;
+    }
+
+    .galeri-cont {
+        width: 100%;
+    }
+
+    .kabah {
+        width: 200px;
+        height: 312px;
+    }
+
+    .galeri-img {
+        display: flex;
+    width: 450px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 37px 27px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    }
+
+    .glr-img {
+        width: 160px;
+    height: 160px;
+    }
+
+    .glr-img2 {
+        width: 160px;
+    height: 160px;
+    }
+
+    .green-button {
+        width: 100px;
+    height: 31px;
+    gap: 6px;
+    font-size: 8px;
+    }
+
+    .show-button {
+        width: 211px;
+    height: 25px; 
+    position: absolute;
+    left: 31px;
+    bottom: 29px;
+    }
+
+    .footer {
+        padding: 60px 40px 10px 40px;;
+    }
+
+    .menu-footer {
+        width: 100%;
+    }
+
+    span.copyright {
+        font-size: 10px;
+    }
+
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
 }
