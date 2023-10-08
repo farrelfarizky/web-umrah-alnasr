@@ -1,0 +1,8 @@
+data-bs-toggle="modal"
+                            data-bs-target="#Paket12Modal"
+
+data-bs-toggle="modal"
+                            data-bs-target="#PaketSuperModal"
+
+data-bs-toggle="modal"
+                            data-bs-target="#HajjModal"
